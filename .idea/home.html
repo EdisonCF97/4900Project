@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushi Lin - Premium Japanese Sushi Restaurant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+
+</head>
+<body>
+
+<header>
+    <div class="container nav-container">
+        <div class="logo">
+            <img src="../image/SushiLin icon.webp"/>
+            <h1>Sushi <span>Lin</span></h1>
+        </div>
+
+        <nav class="nav-links">
+            <a href="home.html" class="active">Home</a>
+            <a href="Sushi-Lin-Menu.pdf" target="_blank">Menu</a>
+            <a href="#">About</a>
+            <a href="#">Reservations</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <div class="nav-icons">
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <i class="fas fa-search"></i>
+            </div>
+            <a href="#"><i class="fas fa-user"></i></a>
+            <a href="#">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</header>
+
+<section class="banner">
+    <div class="banner-slides">
+        <div class="banner-slide" style="background-image: url('../image/chief.png');">
+            <div class="slide-content">
+                <h2>Chef's Omakase Experience</h2>
+                <p>Our experienced sushi chefs meticulously prepare daily specials using the freshest ingredients to create authentic Japanese cuisine.</p>
+                <a href="#" class="btn">Reserve Now</a>
+            </div>
+        </div>
+
+        <div class="banner-slide" style="background-image: url('https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80');">
+            <div class="slide-content">
+                <h2>Spring Seasonal Menu</h2>
+                <p>Experience the delicate flavors of spring with our limited-time menu featuring the finest seasonal ingredients sourced from Japan's premier markets.</p>
+                <a href="#" class="btn">View Menu</a>
+            </div>
+        </div>
+
+        <div class="banner-slide" style="background-image: url('https://images.unsplash.com/photo-1553621042-f6e147245754?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80');">
+            <div class="slide-content">
+                <h2>Tradition and innovation</h2>
+                <p>While retaining traditional Japanese sushi craftsmanship, we incorporate innovative elements to bring you a unique sushi experience.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner-arrow left">
+        <i class="fas fa-chevron-left"></i>
+    </div>
+    <div class="banner-arrow right">
+        <i class="fas fa-chevron-right"></i>
+    </div>
+
+    <div class="banner-nav">
+        <div class="banner-dot active" data-slide="0"></div>
+        <div class="banner-dot" data-slide="1"></div>
+        <div class="banner-dot" data-slide="2"></div>
+    </div>
+</section>
+
+<section class="categories">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Specialties</h2>
+            <p>Explore our wide variety of carefully prepared sushi and experience the most authentic Japanese flavors</p>
+        </div>
+
+        <div class="category-grid">
+            <a href="#" class="category-card">
+                <span class="category-icon">🥗</span>
+                <h3 class="category-name">APPETIZER</h3>
+                <p class="category-desc">Exquisite appetizers, a prelude to awakening your taste buds</p>
+            </a>
+
+            <a href="#" class="category-card">
+                <span class="category-icon">🌯</span>
+                <h3 class="category-name">ROLLS & HANDROLLS</h3>
+                <p class="category-desc">Creative hand rolls and sushi rolls, a fusion of Eastern and Western flavors</p>
+            </a>
+
+            <a href="#" class="category-card">
+                <span class="category-icon">🍣</span>
+                <h3 class="category-name">SUSHI & SASHIMI</h3>
+                <p class="category-desc">Selected seasonal sashimi, hand-made by artisans, for the ultimate freshness experience</p>
+            </a>
+
+            <a href="#" class="category-card">
+                <span class="category-icon">🍱</span>
+                <h3 class="category-name">Combo</h3>
+                <p class="category-desc">Chef-recommended pairings allow you to enjoy a variety of signature dishes at once</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="recommendations">
+    <div class="container">
+        <div class="section-title">
+            <h2>Popular recommendations</h2>
+            <p>Enjoy our customers' favorite signature dishes, a delicacy you can't miss</p>
+        </div>
+
+        <div class="recommendation-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="../image/Top.jpg" height="177" width="284"/>
+                    <span class="product-badge">Top Pick</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Sashimi Dinner</h3>
+                    <p class="product-desc">16pcs of chef’s selected sashimi of the day</p>
+                    <div class="product-price">$40</div>
+                    <div class="product-meta">
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <span class="quantity-display">0</span>
+                            <button class="quantity-btn plus">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="../image/salmon.png" height="1066" width="600"/>
+                    <span class="product-badge">New</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Yaki Salmon Don</h3>
+                    <p class="product-desc">Seared marinated salmon, salmon roe over sushi rice</p>
+                    <div class="product-price">$35</div>
+                    <div class="product-meta">
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <span class="quantity-display">0</span>
+                            <button class="quantity-btn plus">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="../image/Tuna.jpg" height="301" width="444"/>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Tuna Flight</h3>
+                    <p class="product-desc">2 Akami, 2 Chutoro, 2 Otoro, 2 chopped toro, and 1 spicy tuna roll</p>
+                    <div class="product-price">$50</div>
+                    <div class="product-meta">
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <span class="quantity-display">0</span>
+                            <button class="quantity-btn plus">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="../image/combo.png" height="480" width="600"/>
+                    <span class="product-badge">Limited</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Special Combo</h3>
+                    <p class="product-desc">8 pieces of sushi + 6 rolls + miso soup, spring limited edition flavor</p>
+                    <div class="product-price">$48.88</div>
+                    <div class="product-meta">
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <span class="quantity-display">0</span>
+                            <button class="quantity-btn plus">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <div class="section-title">
+            <h2>Why Choose Us</h2>
+            <p>We are dedicated to providing you with the highest-quality dining experience.</p>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-fish"></i>
+                </div>
+                <h3 class="feature-title">Fresh Ingredients</h3>
+                <p class="feature-desc">We select the freshest ingredients from the market daily, ensuring every bite delivers the best flavor.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <h3 class="feature-title">Professional Chefs</h3>
+                <p class="feature-desc">Our head chef team has 20 years of experience, preserving the authentic art of Japanese sushi-making.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3 class="feature-title">Crafted with Care</h3>
+                <p class="feature-desc">Every dish is meticulously prepared, with attention to detail and a pursuit of perfection.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Sushi Lin</h3>
+                <p>We are committed to providing the most authentic Japanese sushi experience, using the freshest ingredients to present you with the most authentic Japanese flavors.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-yelp"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="Sushi-Lin-Menu.pdf" target="_blank">Menu</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Reservations</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Hours</h3>
+                <ul>
+                    <ul class="hours">
+                        <li>Mon - Thur: 05:00 PM - 10:00 PM</li>
+                        <li>Fri - Sun:<br>
+                            12:00 PM - 3:00 PM<br>
+                            05:00 PM - 10:00 PM
+                        </li>
+                    </ul>
+                    <li>Cell: 347-422-0656</li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Subscription</h3>
+                <p>Subscribe to our newsletter for the latest menu updates and special offers</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email address...">
+                    <button><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>© 2025 Sushi Lin, a premium Japanese sushi restaurant. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="home.js"></script>
+</body>
+</html>
