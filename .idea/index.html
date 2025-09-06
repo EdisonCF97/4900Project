@@ -1,56 +1,58 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sushi Lin - Premium Japanese Sushi Restaurant</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="home.css">
+
+    <title>Sushi Lin - Premium Japanese Sushi Restaurant</title>
 
 </head>
 <body>
 
 <header>
+    <!-- 页面头部/导航栏 -->
     <div class="container nav-container">
         <div class="logo">
             <img src="../image/SushiLin icon.webp"/>
             <h1>Sushi <span>Lin</span></h1>
         </div>
 
+        <!-- 主导航菜单 -->
         <nav class="nav-links">
-            <a href="home.html" class="active">Home</a>
-            <a href="Sushi-Lin-Menu.pdf" target="_blank">Menu</a>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
             <a href="#">About</a>
             <a href="#">Reservations</a>
             <a href="#">Contact</a>
         </nav>
 
+        <!-- 导航栏右侧功能图标 -->
         <div class="nav-icons">
-            <div class="search-bar">
+            <div class="search-bar"> <!-- 搜索框 -->
                 <input type="text" placeholder="Search...">
                 <i class="fas fa-search"></i>
             </div>
-            <a href="#"><i class="fas fa-user"></i></a>
+            <a href="#"><i class="fas fa-user"></i></a> <!-- 用户账户图标 -->
             <a href="#">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="cart-count">0</span>
+                <i class="fas fa-shopping-cart"></i> <!-- 购物车图标 -->
+                <span class="cart-count">0</span> <!-- 购物车商品数量显示 -->
             </a>
         </div>
-
-        <button class="mobile-menu-btn">
-            <i class="fas fa-bars"></i>
-        </button>
     </div>
 </header>
 
+<!-- 轮播横幅 -->
 <section class="banner">
-    <div class="banner-slides">
+    <div class="banner-slides"> <!-- 轮播容器 -->
+        <!-- 三个轮播项 -->
         <div class="banner-slide" style="background-image: url('../image/chief.png');">
-            <div class="slide-content">
+            <div class="slide-content"> <!-- 轮播内容 -->
                 <h2>Chef's Omakase Experience</h2>
                 <p>Our experienced sushi chefs meticulously prepare daily specials using the freshest ingredients to create authentic Japanese cuisine.</p>
-                <a href="#" class="btn">Reserve Now</a>
+                <a href="#" class="btn">Reserve Now</a> <!-- 行动按钮 -->
             </div>
         </div>
 
@@ -71,47 +73,49 @@
         </div>
     </div>
 
-    <div class="banner-arrow left">
+    <!-- 轮播导航控件 -->
+    <div class="banner-arrow left"> <!-- 左箭头 -->
         <i class="fas fa-chevron-left"></i>
     </div>
-    <div class="banner-arrow right">
+    <div class="banner-arrow right"> <!-- 右箭头 -->
         <i class="fas fa-chevron-right"></i>
     </div>
 
-    <div class="banner-nav">
+    <div class="banner-nav"> <!-- 轮播指示点 -->
         <div class="banner-dot active" data-slide="0"></div>
         <div class="banner-dot" data-slide="1"></div>
         <div class="banner-dot" data-slide="2"></div>
     </div>
 </section>
 
+<!-- 菜品分类区域 -->
 <section class="categories">
     <div class="container">
-        <div class="section-title">
+        <div class="section-title"> <!-- 区域标题 -->
             <h2>Our Specialties</h2>
             <p>Explore our wide variety of carefully prepared sushi and experience the most authentic Japanese flavors</p>
         </div>
 
-        <div class="category-grid">
-            <a href="#" class="category-card">
-                <span class="category-icon">🥗</span>
-                <h3 class="category-name">APPETIZER</h3>
+        <div class="category-grid"> <!-- 分类 -->
+            <a href="menu.html#appetizer" class="category-card"> <!-- 单个分类卡片 -->
+                <span class="category-icon">🥗</span> <!-- 分类图标 -->
+                <h3 class="category-name">APPETIZER</h3> <!-- 分类名称 -->
                 <p class="category-desc">Exquisite appetizers, a prelude to awakening your taste buds</p>
             </a>
 
-            <a href="#" class="category-card">
+            <a href="menu.html#rolls" class="category-card">
                 <span class="category-icon">🌯</span>
                 <h3 class="category-name">ROLLS & HANDROLLS</h3>
                 <p class="category-desc">Creative hand rolls and sushi rolls, a fusion of Eastern and Western flavors</p>
             </a>
 
-            <a href="#" class="category-card">
+            <a href="menu.html#sashimi" class="category-card">
                 <span class="category-icon">🍣</span>
                 <h3 class="category-name">SUSHI & SASHIMI</h3>
                 <p class="category-desc">Selected seasonal sashimi, hand-made by artisans, for the ultimate freshness experience</p>
             </a>
 
-            <a href="#" class="category-card">
+            <a href="menu.html#combo" class="category-card">
                 <span class="category-icon">🍱</span>
                 <h3 class="category-name">Combo</h3>
                 <p class="category-desc">Chef-recommended pairings allow you to enjoy a variety of signature dishes at once</p>
@@ -120,37 +124,38 @@
     </div>
 </section>
 
+<!-- 推荐菜品区域 -->
 <section class="recommendations">
     <div class="container">
-        <div class="section-title">
+        <div class="section-title"> <!-- 区域标题 -->
             <h2>Popular recommendations</h2>
             <p>Enjoy our customers' favorite signature dishes, a delicacy you can't miss</p>
         </div>
 
-        <div class="recommendation-grid">
-            <div class="product-card">
-                <div class="product-image">
+        <div class="recommendation-grid"> <!-- 推荐菜品网格 -->
+            <div class="product-card"> <!-- 单个产品卡片 -->
+                <div class="product-image">  <!-- 产品图片 -->
                     <img src="../image/Top.jpg" height="177" width="284"/>
-                    <span class="product-badge">Top Pick</span>
+                    <span class="product-badge">Top Pick</span> <!-- 产品标签 -->
                 </div>
-                <div class="product-info">
-                    <h3 class="product-name">Sashimi Dinner</h3>
-                    <p class="product-desc">16pcs of chef’s selected sashimi of the day</p>
-                    <div class="product-price">$40</div>
-                    <div class="product-meta">
-                        <div class="product-rating">
-                            <i class="fas fa-star"></i>
+                <div class="product-info"> <!-- 产品信息 -->
+                    <h3 class="product-name">Sashimi Dinner</h3> <!-- 产品名称 -->
+                    <p class="product-desc">16pcs of chef’s selected sashimi of the day</p> <!-- 产品描述 -->
+                    <div class="product-price">$40</div> <!-- 产品价格 -->
+                    <div class="product-meta"> <!-- 产品元信息 -->
+                        <div class="product-rating"> <!-- 产品评分 -->
+                            <i class="fas fa-star"></i> <!-- 星级图标 -->
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </div>
-                        <div class="quantity-controls">
-                            <button class="quantity-btn minus">
+                        <div class="quantity-controls">  <!-- 数量控制 -->
+                            <button class="quantity-btn minus"> <!-- 减少按钮 -->
                                 <i class="fas fa-minus"></i>
                             </button>
-                            <span class="quantity-display">0</span>
-                            <button class="quantity-btn plus">
+                            <span class="quantity-display">0</span> <!-- 数量显示 -->
+                            <button class="quantity-btn plus"> <!-- 增加按钮 -->
                                 <i class="fas fa-plus"></i>
                             </button>
                         </div>
@@ -250,19 +255,20 @@
     </div>
 </section>
 
+<!-- 特色服务区域 -->
 <section class="features">
     <div class="container">
-        <div class="section-title">
+        <div class="section-title"> <!-- 区域标题 -->
             <h2>Why Choose Us</h2>
             <p>We are dedicated to providing you with the highest-quality dining experience.</p>
         </div>
 
-        <div class="feature-grid">
-            <div class="feature-card">
-                <div class="feature-icon">
+        <div class="feature-grid"> <!-- 特色服务网格 -->
+            <div class="feature-card"> <!-- 单个特色卡片 -->
+                <div class="feature-icon"> <!-- 特色图标 -->
                     <i class="fas fa-fish"></i>
                 </div>
-                <h3 class="feature-title">Fresh Ingredients</h3>
+                <h3 class="feature-title">Fresh Ingredients</h3> <!-- 特色标题 -->
                 <p class="feature-desc">We select the freshest ingredients from the market daily, ensuring every bite delivers the best flavor.</p>
             </div>
 
@@ -285,10 +291,11 @@
     </div>
 </section>
 
+<!-- 页脚区域 -->
 <footer>
     <div class="container">
-        <div class="footer-content">
-            <div class="footer-column">
+        <div class="footer-content"> <!-- 页脚内容 -->
+            <div class="footer-column"> <!-- 页脚列 -->
                 <h3>Sushi Lin</h3>
                 <p>We are committed to providing the most authentic Japanese sushi experience, using the freshest ingredients to present you with the most authentic Japanese flavors.</p>
                 <div class="social-links">
@@ -303,7 +310,7 @@
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a href="home.html">Home</a></li>
-                    <li><a href="Sushi-Lin-Menu.pdf" target="_blank">Menu</a></li>
+                    <li><a href="menu.html">Menu</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Reservations</a></li>
                     <li><a href="#">Contact</a></li>
