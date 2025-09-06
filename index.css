@@ -1,0 +1,772 @@
+/* CSS重置和基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS变量定义 */
+:root {
+    --primary-red: #E53935;
+    --primary-black: #1a1a1a;
+    --primary-gold: #D4AF37;
+    --light-bg: #f9f9f9;
+    --text-dark: #333;
+    --text-light: #777;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    --transition: all 0.3s ease;
+}
+
+/* 基础body样式 */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #fff;
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+/* 容器样式 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 按钮基础样式 */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: var(--primary-red);
+    color: white;
+    text-decoration: none;
+    border-radius: 2px;
+    font-weight: 500;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* 按钮悬停效果 */
+.btn:hover {
+    background-color: #c62828;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(229, 57, 53, 0.3);
+}
+
+/* 轮廓按钮悬停效果 */
+.btn-outline:hover {
+    background-color: var(--primary-red);
+    color: white;
+}
+
+/* 区域标题样式 */
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+/* 区域标题h2样式 */
+.section-title h2 {
+    font-size: 36px;
+    color: var(--primary-black);
+    margin-bottom: 15px;
+}
+
+/* 区域标题下划线 */
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-red);
+}
+
+/* 区域标题描述文字 */
+.section-title p {
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* 顶部导航样式 */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+/* 导航容器 */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo样式 */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo图片样式 */
+.logo img {
+    height: 100px;
+    margin-right: 12px;
+}
+
+/* Logo文字样式 */
+.logo h1 {
+    font-size: 26px;
+    color: var(--primary-black);
+    letter-spacing: 1px;
+}
+
+/* Logo文字特殊部分样式 */
+.logo span {
+    color: var(--primary-red);
+}
+
+/* 导航链接 */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+/* 导航链接样式 */
+.nav-links a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: var(--transition);
+    position: relative;
+}
+
+/* 导航链接下划线动画 */
+.nav-links a:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-red);
+    transition: var(--transition);
+}
+
+/* 导航链接悬停效果 */
+.nav-links a:hover {
+    color: var(--primary-red);
+}
+
+/* 导航链接悬停时下划线效果 */
+.nav-links a:hover:after {
+    width: 100%;
+}
+
+/* 导航图标容器 */
+.nav-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* 导航图标样式 */
+.nav-icons a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    transition: var(--transition);
+}
+
+/* 导航图标悬停效果 */
+.nav-icons a:hover {
+    color: var(--primary-red);
+}
+
+/* 购物车数量标签 */
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: var(--primary-red);
+    color: white;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 搜索栏样式 */
+.search-bar {
+    position: relative;
+    margin-right: 15px;
+}
+
+/* 搜索输入框样式 */
+.search-bar input {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 14px;
+    outline: none;
+    width: 200px;
+    transition: var(--transition);
+}
+
+/* 搜索输入框聚焦效果 */
+.search-bar input:focus {
+    border-color: var(--primary-red);
+    width: 220px;
+}
+
+/* 横幅区域样式 */
+.banner {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+
+/* 横幅幻灯片容器 */
+.banner-slides {
+    display: flex;
+    transition: transform 0.8s ease;
+    height: 100%;
+    width: 300%;
+}
+
+/* 单个幻灯片样式 */
+.banner-slide {
+    width: 33.333%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* 幻灯片遮罩层 */
+.banner-slide:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.4));
+}
+
+/* 幻灯片内容样式 */
+.slide-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 0 20px;
+    max-width: 600px;
+    margin-left: 10%;
+}
+
+/* 幻灯片标题样式 */
+.slide-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease;
+}
+
+/* 幻灯片描述文字样式 */
+.slide-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    animation: fadeInUp 1.2s ease;
+}
+
+/* 横幅导航点容器 */
+.banner-nav {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 3;
+}
+
+/* 单个导航点样式 */
+.banner-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+/* 激活状态的导航点样式 */
+.banner-dot.active {
+    background-color: #fff;
+    transform: scale(1.2);
+}
+
+/* 横幅箭头导航 */
+.banner-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 3;
+    transition: var(--transition);
+    font-size: 20px;
+}
+
+/* 箭头悬停效果 */
+.banner-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* 左侧箭头位置 */
+.banner-arrow.left {
+    left: 20px;
+}
+
+/* 右侧箭头位置 */
+.banner-arrow.right {
+    right: 20px;
+}
+
+/* 淡入向上动画 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 分类区域样式 */
+.categories {
+    padding: 60px 0;
+    background-color: var(--light-bg);
+}
+
+/* 分类网格布局 */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* 分类卡片样式 */
+.category-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+    text-decoration: none;
+    color: var(--text-dark);
+    padding: 30px 20px;
+}
+
+/* 分类卡片悬停效果 */
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* 分类图标样式 */
+.category-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* 分类名称样式 */
+.category-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* 分类描述样式 */
+.category-desc {
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+/* 推荐区域样式 */
+.recommendations {
+    padding: 80px 0;
+}
+
+/* 推荐网格布局 */
+.recommendation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* 产品卡片样式 */
+.product-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+}
+
+/* 产品卡片悬停效果 */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* 产品图片容器 */
+.product-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 产品图片样式 */
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* 产品卡片悬停时图片放大效果 */
+.product-card:hover .product-image img {
+    transform: scale(1.1);
+}
+
+/* 产品徽章样式 */
+.product-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--primary-red);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* 产品信息区域 */
+.product-info {
+    padding: 20px;
+}
+
+/* 产品名称样式 */
+.product-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--primary-black);
+}
+
+/* 产品描述样式 */
+.product-desc {
+    color: var(--text-light);
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* 产品价格样式 */
+.product-price {
+    color: var(--primary-red);
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* 产品元信息区域 */
+.product-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 产品评分样式 */
+.product-rating {
+    color: var(--primary-gold);
+}
+
+/* 数量控制容器 */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 数量按钮样式 */
+.quantity-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+/* 数量按钮悬停效果 */
+.quantity-btn:hover {
+    background-color: var(--primary-red);
+    color: white;
+    border-color: var(--primary-red);
+}
+
+/* 数量显示样式 */
+.quantity-display {
+    font-weight: 600;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* 添加到购物车按钮样式 */
+.add-to-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-red);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+/* 添加到购物车按钮悬停效果 */
+.add-to-cart:hover {
+    background-color: #c62828;
+    transform: scale(1.1);
+}
+
+/* 特色区域样式 */
+.features {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+}
+
+/* 特色网格布局 */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* 特色卡片样式 */
+.feature-card {
+    text-align: center;
+    padding: 40px 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+/* 特色卡片悬停效果 */
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+/* 特色图标样式 */
+.feature-icon {
+    font-size: 40px;
+    color: var(--primary-red);
+    margin-bottom: 20px;
+}
+
+/* 特色标题样式 */
+.feature-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: var(--primary-black);
+}
+
+/* 特色描述样式 */
+.feature-desc {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* 页脚样式 */
+footer {
+    background-color: var(--primary-black);
+    color: #fff;
+    padding: 60px 0 20px;
+}
+
+/* 页脚内容网格布局 */
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+/* 页脚列标题样式 */
+.footer-column h3 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* 页脚列标题下划线 */
+.footer-column h3:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--primary-red);
+}
+
+/* 页脚列表样式 */
+.footer-column ul {
+    list-style: none;
+}
+
+/* 页脚列表项样式 */
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+/* 页脚链接样式 */
+.footer-column a {
+    color: #bbb;
+    text-decoration: none;
+    transition: var(--transition);
+    font-size: 15px;
+}
+
+/* 页脚链接悬停效果 */
+.footer-column a:hover {
+    color: var(--primary-red);
+}
+
+/* 页脚段落样式 */
+.footer-column p {
+    color: #bbb;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* 社交媒体链接容器 */
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+/* 社交媒体链接样式 */
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    border-radius: 50%;
+    transition: var(--transition);
+    color: white;
+}
+
+/* 社交媒体链接悬停效果 */
+.social-links a:hover {
+    background-color: var(--primary-red);
+    transform: translateY(-3px);
+}
+
+/* 新闻订阅表单样式 */
+.newsletter-form {
+    display: flex;
+    margin-top: 15px;
+}
+
+/* 新闻订阅输入框样式 */
+.newsletter-form input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px 0 0 3px;
+    outline: none;
+}
+
+/* 新闻订阅按钮样式 */
+.newsletter-form button {
+    background-color: var(--primary-red);
+    color: white;
+    border: none;
+    padding: 0 15px;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+}
+
+/* 版权信息样式 */
+.copyright {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #444;
+    color: #999;
+    font-size: 14px;
+}
+
+/* 购物车动画元素样式 */
+.cart-animation {
+    position: fixed;
+    z-index: 1000;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 购物车动画图片样式 */
+.cart-animation img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
