@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+    // 轮播图功能
     const slides = document.querySelector('.banner-slides');
     const dots = document.querySelectorAll('.banner-dot');
     const arrows = document.querySelectorAll('.banner-arrow');
@@ -6,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const slideCount = document.querySelectorAll('.banner-slide').length;
     let slideInterval;
 
+    // 切换到指定幻灯片
     function goToSlide(index) {
         if (index < 0) {
             index = slideCount - 1;
@@ -21,14 +24,17 @@ document.addEventListener('DOMContentLoaded', function() {
         currentSlide = index;
     }
 
+    // 切换到下一张幻灯片
     function nextSlide() {
         goToSlide(currentSlide + 1);
     }
 
+    // 启动自动轮播
     function startSlideShow() {
         slideInterval = setInterval(nextSlide, 20000);
     }
 
+    // 为导航点添加点击事件
     dots.forEach(dot => {
         dot.addEventListener('click', function() {
             const slideIndex = parseInt(this.getAttribute('data-slide'));
@@ -38,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // 为箭头添加点击事件
     arrows.forEach(arrow => {
         arrow.addEventListener('click', function() {
             if (this.classList.contains('left')) {
@@ -50,17 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    startSlideShow();
-
-    const banner = document.querySelector('.banner');
-    banner.addEventListener('mouseenter', () => {
-        clearInterval(slideInterval);
-    });
-
-    banner.addEventListener('mouseleave', () => {
-        startSlideShow();
-    });
-
+    // 购物车功能
     const cartCount = document.querySelector('.cart-count');
     let cartItems = 0;
 
@@ -131,12 +128,5 @@ document.addEventListener('DOMContentLoaded', function() {
                 anim.remove();
             }, 800);
         });
-    });
-
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
-
-    mobileMenuBtn.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
     });
 });
