@@ -200,7 +200,7 @@ header {
 }
 
 /* 购物车数量标签 */
-.cart-count {
+.cart-count{
     position: absolute;
     top: -8px;
     right: -8px;
@@ -769,4 +769,3 @@ footer {
     height: 100%;
     object-fit: cover;
 }
-

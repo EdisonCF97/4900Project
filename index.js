@@ -129,4 +129,27 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 800);
         });
     });
+
+    //模拟订阅功能
+    const subscribeBtn = document.getElementById('subscribe-btn');
+    const emailInput = document.getElementById('newsletter-email');
+    const response = document.getElementById('subscription-response');
+
+    subscribeBtn.addEventListener('click', function(e) {
+        e.preventDefault(); // 阻止默认表单提交
+        const email = emailInput.value.trim();
+
+        if (email === "") {
+            response.style.color = "red";
+            response.textContent = "Please enter a valid email address.";
+            return;
+        }
+
+        // Demo: 模拟提交成功
+        response.style.color = "green";
+        response.textContent = `Thank you for subscribing, ${email}!`;
+
+        // 清空输入框
+        emailInput.value = "";
+    });
 });
