@@ -1,58 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="menu.css">
-
-
-    <title>Sushi Lin - Premium Japanese Sushi Restaurant</title>
-
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Sushi Lin - Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="index.css"/>
 </head>
 <body>
-
 <header>
-    <!-- 页面头部/导航栏 -->
     <div class="container nav-container">
         <div class="logo">
-            <img src="image/SushiLin%20icon.webp"/>
+            <img src="image/SushiLin%20icon.webp" alt="Sushi Lin"/>
             <h1>Sushi <span>Lin</span></h1>
         </div>
-
-        <!-- 主导航菜单 -->
         <nav class="nav-links">
-            <a href="index.html" class="active">Home</a>
-            <a href="menu.html" target="_blank">Menu</a>
-            <a href="#">About</a>
-            <a href="#">Reservations</a>
-            <a href="#">Contact</a>
+            <a href="index.html">Home</a>
+            <a href="menu.html" class="active">Menu</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Reservations</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
         </nav>
-
-        <!-- 导航栏右侧功能图标 -->
         <div class="nav-icons">
-            <div class="search-bar"> <!-- 搜索框 -->
-                <input type="text" placeholder="Search...">
-                <i class="fas fa-search"></i>
-            </div>
-            <a href="#"><i class="fas fa-user"></i></a> <!-- 用户账户图标 -->
-            <a href="#" id="cart-icon">
-                <i class="fas fa-shopping-cart"></i> <!-- 购物车图标 -->
-                <span class="cart-count">0</span> <!-- 购物车商品数量显示 -->
+            <a href="#" data-open-cart>
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
             </a>
         </div>
     </div>
+</header>
 
-    <!-- 导航列表 -->
-    <nav1>
-        <a href="#appetizer">APPETIZER</a>
+<!-- Sub Navigation -->
+<div class="menu-subnav">
+    <div class="container subnav-inner">
+        <a href="#appetizer" class="is-active">APPETIZER</a>
         <a href="#rolls">ROLLS</a>
-        <a href="#sashimi">SASHIMA</a>
+        <a href="#sashimi">SUSHI &amp; SASHIMI</a>
         <a href="#combo">COMBO</a>
-    </nav1>
+    </div>
+</div>
 
-    <!-- Appetizer区域 -->
+<main class="container">
+    <!-- Appetizer -->
     <section id="appetizer" class="menu-section">
         <h2 class="section-title">APPETIZER</h2>
 
@@ -64,10 +55,10 @@
             <div class="item-controls">
                 <div class="item-price">$6</div>
                 <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
+                    <button class="quantity-btn" data-minus>-</button>
+                    <input type="number" class="quantity-input" value="0" min="0" aria-label="Quantity"/>
+                    <button class="quantity-btn" data-plus>+</button>
+                    <button class="btn" data-add data-id="edamame" data-name="Edamame" data-price="6">Add</button>
                 </div>
             </div>
         </div>
@@ -80,10 +71,10 @@
             <div class="item-controls">
                 <div class="item-price">$15</div>
                 <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
+                    <button class="quantity-btn" data-minus>-</button>
+                    <input type="number" class="quantity-input" value="0" min="0"/>
+                    <button class="quantity-btn" data-plus>+</button>
+                    <button class="btn" data-add data-id="maguro-avocado" data-name="Maguro Avocado" data-price="15">Add</button>
                 </div>
             </div>
         </div>
@@ -96,10 +87,10 @@
             <div class="item-controls">
                 <div class="item-price">$14</div>
                 <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
+                    <button class="quantity-btn" data-minus>-</button>
+                    <input type="number" class="quantity-input" value="0" min="0"/>
+                    <button class="quantity-btn" data-plus>+</button>
+                    <button class="btn" data-add data-id="yuzu-tai" data-name="Yuzu Tai" data-price="14">Add</button>
                 </div>
             </div>
         </div>
@@ -112,663 +103,94 @@
             <div class="item-controls">
                 <div class="item-price">$25</div>
                 <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Tako Sunomono</div>
-                <div class="item-description">Sliced octopus, cucumber w. ponzu</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$13</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Kanpachi Jalapeno</div>
-                <div class="item-description">Thin sliced amberjack w. yuzu kosho</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$16</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Usuzukuri</div>
-                <div class="item-description">Thin sliced fluke w. ponzu</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$13</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">King Crab Salad</div>
-                <div class="item-description">King crab, cucumber, and mix seaweed</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$25</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Uni Tasting</div>
-                <div class="item-description">Hokkaido, Maine, and Santa Barbara</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$20</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
+                    <button class="quantity-btn" data-minus>-</button>
+                    <input type="number" class="quantity-input" value="0" min="0"/>
+                    <button class="quantity-btn" data-plus>+</button>
+                    <button class="btn" data-add data-id="oyster-sampler" data-name="Oyster Sampler" data-price="25">Add</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Rolls区域 -->
+    <!-- Rolls -->
     <section id="rolls" class="menu-section">
-        <h2 class="section-title">ROLLS & HANDROLLS</h2>
+        <h2 class="section-title">ROLLS &amp; HANDROLLS</h2>
 
         <div class="menu-item">
-            <div>
-                <div class="item-name">Negi Toro</div>
-            </div>
+            <div><div class="item-name">Negi Toro</div></div>
             <div class="item-controls">
                 <div class="item-price">$13</div>
                 <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
+                    <button class="quantity-btn" data-minus>-</button>
+                    <input type="number" class="quantity-input" value="0" min="0"/>
+                    <button class="quantity-btn" data-plus>+</button>
+                    <button class="btn" data-add data-id="negi-toro" data-name="Negi Toro" data-price="13">Add</button>
                 </div>
             </div>
         </div>
 
         <div class="menu-item">
-            <div>
-                <div class="item-name">Yellowtail Scallion</div>
-            </div>
+            <div><div class="item-name">Yellowtail Scallion</div></div>
             <div class="item-controls">
                 <div class="item-price">$8</div>
                 <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
+                    <button class="quantity-btn" data-minus>-</button>
+                    <input type="number" class="quantity-input" value="0" min="0"/>
+                    <button class="quantity-btn" data-plus>+</button>
+                    <button class="btn" data-add data-id="yellowtail-scallion" data-name="Yellowtail Scallion" data-price="8">Add</button>
                 </div>
             </div>
         </div>
 
         <div class="menu-item">
-            <div>
-                <div class="item-name">Tuna</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$8</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Tuna Avocado</div>
-            </div>
+            <div><div class="item-name">Spicy Tuna</div></div>
             <div class="item-controls">
                 <div class="item-price">$9</div>
                 <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Tuna Cucumber</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$9</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Salmon</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$8</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Salmon Avocado</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$9</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Salmon Cucumber</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$9</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">King Crab California</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$18</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">California</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$7</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Spicy Tuna</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$9</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Spicy Salmon</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$9</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Spicy Scallop</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$12</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Shrimp Tempura</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$10</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Eel Avocado</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$10</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Eel Cucumber</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$10</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Avocado rolls</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$6</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Cucumber</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$6</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Kanpyo</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$6</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Avocado & Cucumber</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$6</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Ume-Shiso</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$6</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Sweet Potato Tempura</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$6</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
+                    <button class="quantity-btn" data-minus>-</button>
+                    <input type="number" class="quantity-input" value="0" min="0"/>
+                    <button class="quantity-btn" data-plus>+</button>
+                    <button class="btn" data-add data-id="spicy-tuna" data-name="Spicy Tuna" data-price="9">Add</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sashimi区域 -->
+    <!-- Sushi & Sashimi -->
     <section id="sashimi" class="menu-section">
-        <h2 class="section-title">SUSHI & SASHIMI</h2>
+        <h2 class="section-title">SUSHI &amp; SASHIMI</h2>
 
         <div class="menu-item">
-            <div>
-                <div class="item-name">Otoro</div>
-            </div>
+            <div><div class="item-name">Otoro</div></div>
             <div class="item-controls">
                 <div class="item-price">$13</div>
                 <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
+                    <button class="quantity-btn" data-minus>-</button>
+                    <input type="number" class="quantity-input" value="0" min="0"/>
+                    <button class="quantity-btn" data-plus>+</button>
+                    <button class="btn" data-add data-id="otoro" data-name="Otoro" data-price="13">Add</button>
                 </div>
             </div>
         </div>
 
         <div class="menu-item">
-            <div>
-                <div class="item-name">Chutoro</div>
-            </div>
+            <div><div class="item-name">Chutoro</div></div>
             <div class="item-controls">
                 <div class="item-price">$11</div>
                 <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Akami</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$7</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Hamachi</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$7</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Kanpachi</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$7</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Shima Aji</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$7</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">King Salmon</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$7</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Yaki Salmon</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$7</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Hirame / Hotate</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$7</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Madai / Botan</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$9</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Kimedai / Unagi</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$8</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Aji / Uni</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$9</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Ikura / Tamago</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$4</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Tako / A5 Wagyu</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$16</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">King Crab</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$12</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
+                    <button class="quantity-btn" data-minus>-</button>
+                    <input type="number" class="quantity-input" value="0" min="0"/>
+                    <button class="quantity-btn" data-plus>+</button>
+                    <button class="btn" data-add data-id="chutoro" data-name="Chutoro" data-price="11">Add</button>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Combo -->
     <section id="combo" class="menu-section">
         <h2 class="section-title">SUSHI BAR ENTRÉE (COMBO)</h2>
-        <p style="font-style: italic; margin-bottom: 20px;">Served with miso soup or salad</p>
+        <p class="menu-note">Served with miso soup or salad.</p>
 
         <div class="menu-item">
             <div>
@@ -778,10 +200,10 @@
             <div class="item-controls">
                 <div class="item-price">$37</div>
                 <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
+                    <button class="quantity-btn" data-minus>-</button>
+                    <input type="number" class="quantity-input" value="0" min="0"/>
+                    <button class="quantity-btn" data-plus>+</button>
+                    <button class="btn" data-add data-id="sushi-dinner" data-name="Sushi Dinner" data-price="37">Add</button>
                 </div>
             </div>
         </div>
@@ -794,26 +216,10 @@
             <div class="item-controls">
                 <div class="item-price">$40</div>
                 <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Sashimi & Sushi Combo</div>
-                <div class="item-description">9pcs sashimi, 6pcs sushi and 1 roll</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$45</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
+                    <button class="quantity-btn" data-minus>-</button>
+                    <input type="number" class="quantity-input" value="0" min="0"/>
+                    <button class="quantity-btn" data-plus>+</button>
+                    <button class="btn" data-add data-id="sashimi-dinner" data-name="Sashimi Dinner" data-price="40">Add</button>
                 </div>
             </div>
         </div>
@@ -821,78 +227,43 @@
         <div class="menu-item">
             <div>
                 <div class="item-name">Tuna Flight</div>
-                <div class="item-description">2 akami, 2 chutoro, 2 o-toro, 2 chopped toro, 1 spicy tuna roll</div>
+                <div class="item-description">2 akami, 2 chutoro, 2 otoro, 2 chopped toro, 1 spicy tuna roll</div>
             </div>
             <div class="item-controls">
                 <div class="item-price">$50</div>
                 <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Yaki Salmon Don</div>
-                <div class="item-description">Scared marinated salmon, salmon roe over sushi rice</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$35</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div>
-                <div class="item-name">Unadon</div>
-                <div class="item-description">Grilled freshwater eel over rice</div>
-            </div>
-            <div class="item-controls">
-                <div class="item-price">$35</div>
-                <div class="quantity-controls">
-                    <button class="quantity-btn minus">-</button>
-                    <input type="number" class="quantity-input" value="0" min="0">
-                    <button class="quantity-btn plus">+</button>
-                    <button class="add-to-cart-btn">Add</button>
+                    <button class="quantity-btn" data-minus>-</button>
+                    <input type="number" class="quantity-input" value="0" min="0"/>
+                    <button class="quantity-btn" data-plus>+</button>
+                    <button class="btn" data-add data-id="tuna-flight-combo" data-name="Tuna Flight" data-price="50">Add</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer class="menu-footer">
         <p>*Please let us know if any food allergy.</p>
         <p class="allergy-notice">*Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of food borne illness.</p>
     </footer>
+</main>
 
-    <!-- 购物车侧边栏 -->
-    <div class="overlay" id="overlay"></div>
-    <div class="cart-sidebar" id="cart-sidebar">
-        <div class="cart-header">
-            <h2>Your Cart</h2>
-            <button class="close-cart" id="close-cart">&times;</button>
-        </div>
-        <div class="cart-items" id="cart-items">
-            <!-- 购物车商品将在这里动态添加 -->
-            <div class="empty-cart-message">Your cart is empty</div>
-        </div>
-        <div class="cart-total">
-            <span>Total:</span>
-            <span id="cart-total-price">$0.00</span>
-        </div>
-        <button class="checkout-btn">Proceed to Checkout</button>
+<!-- Cart Drawer -->
+<div class="cart-overlay"></div>
+<aside class="cart-drawer" aria-label="Cart">
+    <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button class="cart-close" data-close-cart>&times;</button>
     </div>
+    <div class="cart-items"></div>
+    <div class="cart-footer">
+        <div class="cart-summary">
+            <strong>Total</strong>
+            <strong id="cart-summary-total">$0.00</strong>
+        </div>
+        <button class="btn cart-checkout" data-checkout>Proceed to Checkout</button>
+    </div>
+</aside>
 
-</header>
-
-<script src="menu.js"></script>
-
+<script src="app.js"></script>
 </body>
 </html>
