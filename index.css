@@ -922,3 +922,129 @@ footer{
     margin-top:6px;
 }
 
+/* =================================================
+   CONTACT PAGE (contact.html) — 联系方式与地图
+   ================================================= */
+.contact-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:20px;
+}
+
+.contact-card,
+.map-card,
+.reservation-card{
+    background:#fff;
+    border-radius:12px;
+    box-shadow:var(--shadow);
+    padding:20px;
+}
+
+.map-embed{
+    width:100%;
+    height:320px;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+/* =================================================
+   CHECKOUT PAGE (checkout.html) — 结账页
+   ================================================= */
+.checkout-grid{
+    display:grid;
+    grid-template-columns:1.25fr .75fr;
+    gap:24px;
+}
+
+.order-card{
+    background:#fff;
+    border-radius:12px;
+    box-shadow:var(--shadow);
+    padding:20px;
+    position:sticky;
+    top:92px;
+}
+
+.order-items{
+    display:grid;
+    gap:10px;
+    margin-bottom:10px;
+}
+
+.order-item{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:8px;
+    padding:8px 0;
+    border-bottom:1px dashed #eee;
+}
+
+.order-item .oi-name{
+    font-weight:700;
+}
+
+.order-item .oi-meta{
+    color:var(--text-light);
+    font-size:13px;
+}
+
+.order-item .oi-price{
+    color:var(--primary-red);
+    font-weight:800;
+}
+
+.order-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:6px 0;
+}
+
+.order-row.total{
+    border-top:1px solid #eee;
+    margin-top:6px;
+    padding-top:12px;
+}
+
+/* =================================================
+   LOGIN PAGE (login.html) — 登录/注册
+   ================================================= */
+.auth-wrap{
+    display:grid;
+    place-items:center;
+}
+
+.auth-card{
+    width:min(560px, 100%);
+    background:#fff;
+    border-radius:12px;
+    box-shadow:var(--shadow);
+    padding:20px;
+}
+
+.auth-tabs{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:6px;
+    margin-bottom:12px;
+}
+
+.auth-tab{
+    padding:10px 12px;
+    border:1px solid #eee;
+    border-radius:8px;
+    background:#f8f8f8;
+    cursor:pointer;
+    font-weight:800;
+}
+
+.auth-tab.active{
+    background:var(--primary-red);
+    color:#fff;
+    border-color:var(--primary-red);
+}
+
+.auth-panel.hidden{
+    display:none;
+}
+
