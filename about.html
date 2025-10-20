@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Sushi Lin - About</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+<header>
+    <div class="container nav-container">
+        <div class="logo">
+            <img src="image/SushiLin%20icon.webp" alt="Sushi Lin"/>
+            <h1>Sushi <span>Lin</span></h1>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="about.html" class="active">About</a>
+            <a href="contact.html">Reservations</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+        </nav>
+        <div class="nav-icons">
+            <a href="#" data-open-cart>
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+    </div>
+</header>
+
+<section class="about-hero" style="background:linear-gradient(90deg,#1a1a1a,#2a2a2a); color:#fff; padding:60px 0; margin-bottom:20px;">
+    <div class="container">
+        <h2 style="font-size:38px; margin-bottom:10px;">Our Story</h2>
+        <p style="max-width:760px; color:#e8e8e8;">
+            Founded with a passion for authentic Japanese cuisine, Sushi Lin blends
+            tradition and innovation to create unforgettable dining experiences.
+        </p>
+    </div>
+</section>
+
+<section class="page-section">
+    <div class="container" style="display:grid; grid-template-columns:repeat(3,1fr); gap:18px;">
+        <div class="about-card" style="background:#fff; border-radius:12px; box-shadow:var(--shadow); padding:24px;">
+            <h3 style="margin-bottom:8px;">Craftsmanship</h3>
+            <p>Our chefs focus on knife work, rice, and balance of flavors that reflect true omakase spirit.</p>
+        </div>
+        <div class="about-card" style="background:#fff; border-radius:12px; box-shadow:var(--shadow); padding:24px;">
+            <h3 style="margin-bottom:8px;">Sourcing</h3>
+            <p>We select premium fish and seasonal ingredients from top markets to ensure peak freshness.</p>
+        </div>
+        <div class="about-card" style="background:#fff; border-radius:12px; box-shadow:var(--shadow); padding:24px;">
+            <h3 style="margin-bottom:8px;">Philosophy</h3>
+            <p>Excellence through simplicity: every plate celebrates harmony, texture, and temperature.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="copyright">
+            <p>© 2025 Sushi Lin. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Cart Drawer -->
+<div class="cart-overlay"></div>
+<aside class="cart-drawer" aria-label="Cart">
+    <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button class="cart-close" data-close-cart>&times;</button>
+    </div>
+    <div class="cart-items"></div>
+    <div class="cart-footer">
+        <div class="cart-summary">
+            <strong>Total</strong>
+            <strong id="cart-summary-total">$0.00</strong>
+        </div>
+        <button class="btn cart-checkout" data-checkout>Proceed to Checkout</button>
+    </div>
+</aside>
+
+<script src="app.js"></script>
+</body>
+</html>
