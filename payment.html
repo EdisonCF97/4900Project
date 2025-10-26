@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Sushi Lin - Checkout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body class="page-payment">
+<header>
+    <div class="container nav-container">
+        <div class="logo">
+            <img src="image/SushiLin%20icon.webp" alt="Sushi Lin"/>
+            <h1>Sushi <span>Lin</span></h1>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Reservations</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+        </nav>
+        <div class="nav-icons">
+            <a href="#" data-open-cart>
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+    </div>
+</header>
+
+<main class="container checkout-grid page-section">
+    <section class="checkout-left">
+        <h2 class="section-title"><span>Checkout</span></h2>
+
+        <form id="checkout-form" class="form">
+            <h3>Contact</h3>
+            <div class="grid-2">
+                <div>
+                    <label for="co-name">Full Name</label>
+                    <input id="co-name" type="text" required/>
+                </div>
+                <div>
+                    <label for="co-email">Email</label>
+                    <input id="co-email" type="email" required/>
+                </div>
+            </div>
+
+            <h3>Order Type</h3>
+            <div class="delivery-method" style="display:flex; gap:16px; margin-bottom:8px;">
+                <label><input type="radio" name="orderType" value="pickup" checked> Pick up (free)</label>
+                <label><input type="radio" name="orderType" value="delivery"> Delivery ($5.00)</label>
+            </div>
+
+            <h3>Delivery</h3>
+            <div id="address-fields">
+                <div class="grid-2">
+                    <div>
+                        <label for="co-address">Address</label>
+                        <input id="co-address" type="text" required/>
+                    </div>
+                    <div>
+                        <label for="co-city">City</label>
+                        <input id="co-city" type="text" required/>
+                    </div>
+                </div>
+                <div class="grid-2">
+                    <div>
+                        <label for="co-state">State</label>
+                        <input id="co-state" type="text" required/>
+                    </div>
+                    <div>
+                        <label for="co-zip">ZIP</label>
+                        <input id="co-zip" type="text" required/>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Payment</h3>
+            <div class="grid-2">
+                <div>
+                    <label for="co-card">Card Number</label>
+                    <input id="co-card" type="text" inputmode="numeric" placeholder="4242 4242 4242 4242" required/>
+                </div>
+                <div>
+                    <label for="co-name-on-card">Name on Card</label>
+                    <input id="co-name-on-card" type="text" required/>
+                </div>
+            </div>
+            <div class="grid-2">
+                <div>
+                    <label for="co-exp">Expiry (MM/YY)</label>
+                    <input id="co-exp" type="text" placeholder="12/28" required/>
+                </div>
+                <div>
+                    <label for="co-cvc">CVC</label>
+                    <input id="co-cvc" type="text" placeholder="123" required/>
+                </div>
+            </div>
+
+            <button class="btn" type="submit">Pay Now</button>
+            <!-- PayPal Buttons -->
+            <div id="paypal-buttons" style="margin-top:12px;"></div>
+
+            <div id="co-feedback" class="hint"></div>
+        </form>
+    </section>
+
+    <aside class="checkout-right">
+        <div class="order-card">
+            <h3>Order Summary</h3>
+            <div id="order-items" class="order-items"></div>
+            <div class="order-row"><span>Subtotal</span><strong id="sum-subtotal">$0.00</strong></div>
+            <div class="order-row"><span>Delivery</span><strong id="sum-delivery">$5.00</strong></div>
+            <div class="order-row total"><span>Total</span><strong id="sum-total">$0.00</strong></div>
+        </div>
+    </aside>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="copyright">
+            <p>© 2025 Sushi Lin. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Cart Drawer -->
+<div class="cart-overlay"></div>
+<aside class="cart-drawer" aria-label="Cart">
+    <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button class="cart-close" data-close-cart>&times;</button>
+    </div>
+    <div class="cart-items"></div>
+    <div class="cart-footer">
+        <div class="cart-summary">
+            <strong>Total</strong>
+            <strong id="cart-summary-total">$0.00</strong>
+        </div>
+        <button class="btn cart-checkout" data-checkout>Proceed to Checkout</button>
+    </div>
+</aside>
+
+<!-- PayPal SDK (Sandbox client id) -->
+<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
+<script src="app.js"></script>
+</body>
+</html>
