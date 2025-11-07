@@ -32,6 +32,66 @@
     </div>
 </header>
 
+<section class="page-section">
+    <div class="container auth-wrap">
+        <div class="auth-card">
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login">Login</button>
+                <button class="auth-tab" data-tab="register">Register</button>
+            </div>
+
+            <div class="auth-panel" id="panel-login">
+                <form id="login-form" class="form">
+                    <label for="lg-email">Email</label>
+                    <input id="lg-email" type="email" required/>
+                    <label for="lg-pass">Password</label>
+                    <input id="lg-pass" type="password" required/>
+                    <button class="btn" type="submit">Login</button>
+                    <div id="lg-feedback" class="hint"></div>
+                </form>
+            </div>
+
+            <div class="auth-panel hidden" id="panel-register">
+                <form id="reg-form" class="form">
+                    <label for="rg-name">Full Name</label>
+                    <input id="rg-name" type="text" required/>
+                    <label for="rg-email">Email</label>
+                    <input id="rg-email" type="email" required/>
+                    <label for="rg-pass">Password</label>
+                    <input id="rg-pass" type="password" required/>
+                    <button class="btn" type="submit">Create Account</button>
+                    <div id="rg-feedback" class="hint"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="copyright">
+            <p>© 2025 Sushi Lin. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Cart Drawer -->
+<div class="cart-overlay"></div>
+<aside class="cart-drawer" aria-label="Cart">
+    <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button class="cart-close" data-close-cart>&times;</button>
+    </div>
+    <div class="cart-items"></div>
+    <div class="cart-footer">
+        <div class="cart-summary">
+            <strong>Total</strong>
+            <strong id="cart-summary-total">$0.00</strong>
+        </div>
+        <button class="btn cart-checkout" data-checkout>Proceed to Checkout</button>
+    </div>
+</aside>
+
 <script src="app.js"></script>
 </body>
 </html>
